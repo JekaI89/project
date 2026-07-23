@@ -1,0 +1,50 @@
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Dependencies
+/vendor/
+/node_modules/
+
+# Laravel runtime
+/storage/logs/*
+!/storage/logs/.gitkeep
+/storage/framework/cache/*
+!/storage/framework/cache/.gitkeep
+/storage/framework/sessions/*
+!/storage/framework/sessions/.gitkeep
+/storage/framework/views/*
+!/storage/framework/views/.gitkeep
+/bootstrap/cache/*
+!/bootstrap/cache/.gitkeep
+/storage/pail/
+
+# Large ERP dumps (GitHub 100MB limit)
+/storage/dumps/*.sql
+/storage/dumps/_*.sql
+/storage/dumps/_*.txt
+!/storage/dumps/.gitkeep
+
+# Frontend local
+/public/hot
+/public/storage
+
+# IDE / OS
+.idea/
+.vscode/
+.zed/
+.fleet/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Test / coverage
+/phpunit.result.cache
+/.phpunit.cache
+/coverage/
+
+# Misc
+*.log
+npm-debug.log*
+yarn-error.log*

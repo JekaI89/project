@@ -1,0 +1,16 @@
+# Product Web — git package
+
+Source: C:\Project\product_web_20260723_0928
+Remote: https://github.com/JekaI89/project
+
+## Contents
+- Laravel + Vue (Inertia) source
+- docker-compose.yml, docker/
+- scripts/
+- .env.example (secrets NOT included)
+- public/build (frontend assets; rebuild with npm run build if needed)
+
+## Not in git
+- .env
+- vendor/, node_modules/
+- storage/dumps/*.sql (too large for GitHub)
