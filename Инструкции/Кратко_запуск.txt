@@ -1,0 +1,44 @@
+Product Web — краткий запуск
+============================
+
+Папка проекта:  C:\product_grok
+Delphi эталон:  C:\Product  (только смотреть)
+
+1) Запустить Docker Desktop (Engine running)
+
+2) PowerShell:
+   cd C:\product_grok
+   docker compose up -d
+
+3) Браузер:
+   http://127.0.0.1:8080/login
+
+4) Логины:
+   admin / admin
+   test  / test
+
+5) Дамп БД (прод):
+   C:\product_grok\storage\dumps\product_20260722.sql
+
+   Перезаливка:
+   powershell -ExecutionPolicy Bypass -File .\scripts\db-setup.ps1 -Force
+
+Модули (готовые):
+   /store — склады (комплектующие / готовая / в пути)
+   /moves — перемещения (Nakl / x_otchet_docs)
+   /inventory — инвентаризация (Inv / inv_sp_finds)
+   /settings — настройки (Setup + пользователи, pravo 1)
+
+Фото на складах (Delphi files_product):
+   В .env: PRODUCT_IMG_PATH=E:\files_product
+   (или путь к шаре, где лежат 123_low.jpg / 123.jpg)
+   Docker: PRODUCT_IMG_HOST=E:/files_product + restart compose
+
+Передача на сервер:
+   docs\DEPLOY_SERVER.md
+   powershell -File .\scripts\package-for-server.ps1
+   → C:\product_grok_deploy\product_web_*.zip
+   /goods, /orders, /purchase, /routing
+
+Полная переписка и детали:
+   C:\product_grok\Инструкции\Переписка_и_инструкции_Product_Web.md
